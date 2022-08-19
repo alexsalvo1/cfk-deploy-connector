@@ -1,0 +1,20 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Connector
+metadata:
+  name: jms
+  namespace: confluent
+spec:
+  class: "io.confluent.connect.jms.JmsSourceConnector"
+  taskMax: 1
+  connectClusterRef:
+    name: connect
+  configs:
+    kafka.topic : "jms-topic"
+    jms.destination.name: "salessandro"
+    java.naming.factory.initial: ""
+    java.naming.provider.url: ""
+    # The following define the information used to validate the license stored in Kafka.
+    confluent.license: ""
+    confluent.topic.bootstrap.servers: "localhost:9092"
+    java.naming.security.principal: test
+    java.naming.security.credentials: salessandro1

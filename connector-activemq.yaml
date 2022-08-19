@@ -1,0 +1,22 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Connector
+metadata:
+  name: activemq1
+  namespace: confluent
+spec:
+  class: "io.confluent.connect.activemq.ActiveMQSourceConnector"
+  taskMax: 1
+  connectClusterRef:
+    name: connect
+  configs:
+    # The following values must be configured.
+    kafka.topic: "jms-topic"
+    activemq.url: "ssl://b-6cf65b75-ec00-4543-b4b7-db7ccdc1833e-1.mq.eu-west-1.amazonaws.com:61617"
+    jms.destination.name: "salessandro"
+    # The following define the information used to validate the license stored in Kafka
+    # or leave blank for a 30 day trial
+    confluent.license: ""
+    confluent.topic.bootstrap.servers: "kafka:9071"
+    activemq.username: "test"
+    activemq.password: "salessandro1"
+
