@@ -1,0 +1,21 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Connect
+metadata:
+  name: connect
+  namespace: confluent 
+spec:
+  replicas: 2
+  image:
+    application: 829250931565.dkr.ecr.eu-west-1.amazonaws.com/salessandro:0.0.3
+    init: confluentinc/confluent-init-container:2.4.0
+  tls:
+    secretRef: kafka-tls
+  dependencies:
+    kafka:
+      bootstrapEndpoint: kafka.confluent.svc.cluster.local:9071
+      tls:
+        enabled: true
+  externalAccess:
+    type: loadBalancer
+    loadBalancer:
+      domain: alexsalvo1.com

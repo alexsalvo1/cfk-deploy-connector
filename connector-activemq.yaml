@@ -1,7 +1,7 @@
 apiVersion: platform.confluent.io/v1beta1
 kind: Connector
 metadata:
-  name: activemq1
+  name: activemq
   namespace: confluent
 spec:
   class: "io.confluent.connect.activemq.ActiveMQSourceConnector"
@@ -16,7 +16,7 @@ spec:
     # The following define the information used to validate the license stored in Kafka
     # or leave blank for a 30 day trial
     confluent.license: ""
-    confluent.topic.bootstrap.servers: "kafka:9071"
+    confluent.topic.bootstrap.servers: "kafka.confluent.svc.cluster.local:9071"
     activemq.username: "test"
     activemq.password: "salessandro1"
 
