@@ -1,1 +1,9 @@
 .DS_Store
+clusterlink/resources/sslcerts/ca/*.pem
+clusterlink/resources/sslcerts/ca/*.csr
+clusterlink/resources/sslcerts/client/*.jks
+clusterlink/resources/sslcerts/server/*.pem
+clusterlink/resources/sslcerts/server/*.csr
+clusterlink/config1.sh
+clusterlink/config2.sh
+clusterlink/resources/sslcerts/server/server-domain-2.json
