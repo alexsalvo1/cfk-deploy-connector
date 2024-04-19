@@ -23,6 +23,6 @@ spec:
     confluent.topic.ssl.keystore.location: "/mnt/sslcerts/keystore.p12"
     confluent.topic.ssl.keystore.password: "mystorepassword"
     confluent.topic.ssl.key.password: "mystorepassword"
-    activemq.username: "test"
-    activemq.password: "salessandro1"
+    activemq.username: "<username>"
+    activemq.password: "<password>"
 

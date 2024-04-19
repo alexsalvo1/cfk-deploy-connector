@@ -17,6 +17,6 @@ spec:
     # or leave blank for a 30 day trial
     confluent.license: ""
     confluent.topic.bootstrap.servers: "kafka.confluent.svc.cluster.local:9071"
-    activemq.username: "test"
-    activemq.password: "salessandro1"
+    activemq.username: "<username>"
+    activemq.password: "<password>"
 
