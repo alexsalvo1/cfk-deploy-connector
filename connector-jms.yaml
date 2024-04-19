@@ -16,5 +16,5 @@ spec:
     # The following define the information used to validate the license stored in Kafka.
     confluent.license: ""
     confluent.topic.bootstrap.servers: "localhost:9092"
-    java.naming.security.principal: test
-    java.naming.security.credentials: salessandro1
+    java.naming.security.principal: <principal>
+    java.naming.security.credentials: <credentials>
